@@ -1,0 +1,2 @@
+# MontyHall
+Le problème de Monty Hall est un casse-tête probabiliste librement inspiré du jeu télévisé américain "Let's Make a Deal". Il est simple dans son énoncé, mais non intuitif dans sa résolution et c'est pourquoi on parle parfois à son sujet de paradoxe de Monty Hall. Ceci permettra d'expliciter les résultats statistiques via une expérience aléatoire répété un certain nombre de fois. Le tout sera fait en Python.
