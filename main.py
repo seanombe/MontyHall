@@ -62,6 +62,7 @@ def partie_unitaire(strategie):
     else:
         return 'Anomalie'
 
+#fonction de répétition d'opérations
 def jouer_plusieurs_parties(strategie, nombredeparties):
 
     liste_des_victoires = []
@@ -76,12 +77,12 @@ def jouer_plusieurs_parties(strategie, nombredeparties):
 
 
 def main(n):
-
+    # Affichage des résultats via console
     print("Avec la stratégie : Garder, nous gagnons {}/{}"
           .format(jouer_plusieurs_parties(Strategie.GARDER, n), n))
     print("Avec la stratégie : Changer, nous gagnons {}/{}"
           .format(jouer_plusieurs_parties(Strategie.CHANGER, n), n))
-
+#Affichage des résultats via Matplotlib
     plt.figure()
     plt.bar([1,2],[jouer_plusieurs_parties(Strategie.CHANGER, n)/n,
                    jouer_plusieurs_parties(Strategie.GARDER, n)/n],
@@ -89,11 +90,8 @@ def main(n):
     plt.title("Monty Hall - Estimation - {} essais".format(n))
     plt.xlabel("Stratégie")
     plt.ylabel("Probabilité")
-
-
-
     plt.show()
     
 
-
+## Lancement du jeu 10000 FOIS
 main(10000)
