@@ -32,7 +32,7 @@ class Strategie(Enum):
 def partie_unitaire(strategie):
 
     seed()
-    portes = [0,1,2] # Le porte seront représenté par une liste à 3 valeurs possibles
+    portes = [0,1,2] # Les portes seront représentées par une liste à 3 valeurs possibles
     porte_gagnante = randint(0,2) # La porte gagnante est générée aléatoirement entre 0 1 et 2 (correspondant
     # aux index du tableau de porte)
     choix_de_base_joueur = randint(0,2) # Le choix du joueur est généré aléatoirement entre 0 1 et 2 (correspondant
@@ -82,7 +82,7 @@ def main(n):
           .format(jouer_plusieurs_parties(Strategie.GARDER, n), n))
     print("Avec la stratégie : Changer, nous gagnons {}/{}"
           .format(jouer_plusieurs_parties(Strategie.CHANGER, n), n))
-#Affichage des résultats via Matplotlib
+    #Affichage des résultats via Matplotlib
     plt.figure()
     plt.bar([1,2],[jouer_plusieurs_parties(Strategie.CHANGER, n)/n,
                    jouer_plusieurs_parties(Strategie.GARDER, n)/n],
